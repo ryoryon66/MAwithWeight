@@ -1,0 +1,2 @@
+# MAwithWeight
+MAモデルにweightをつけたバージョンの実装例
