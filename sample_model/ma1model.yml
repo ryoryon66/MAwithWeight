@@ -1,6 +1,6 @@
 
 
-#all nodes 議論グラフの頂点名です
+#all nodes 議論グラフの頂点名です。0以上の整数で入れてください。
 nodes : [1,2,3]
 #[from,to,is_attack]
 edges :
