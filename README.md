@@ -1,11 +1,6 @@
 # MAwithWeight
 MAモデルにweightをつけたバージョンの実装例
 
-# 使い方
-
-sample_model/ma1model.ymlの形式を参考にして重み付きMAモデルを表現するymlファイルを書いてください。
-python MAmodel/MAmodel.pyを実行後ymlのパスを渡せば、グラフの上にpredicted_labelsが記述されたpdfが出てきます。
-
 
 # 環境構築
 
@@ -20,6 +15,20 @@ pip install -r requirements.txt
 ```
 
 M1 macでpygraphvizのinstallに失敗する場合こちらが参考になります。[link](https://github.com/pygraphviz/pygraphviz/issues/398)
+
+```
+python MAmodel/MAmodel.py
+```
+
+が動作し、pdfファイルが生成されていれば環境構築終了です。
+
+# 使い方
+
+1. sample_model/ma1model.ymlの形式を参考にして重み付きMAモデルを表現するymlファイルを書いてください。
+2. MAmodel/settings.pyを適切に設定してください。
+3. python MAmodel/MAmodel.pyを実行してください。
+
+
 
 # グラフにつけた属性一覧(networkX)
 
