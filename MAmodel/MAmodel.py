@@ -14,6 +14,8 @@ import copy
 import sys
 import json
 
+import settings
+
 from typing import Callable, Optional,Union,Any
 import yaml
 
@@ -515,7 +517,7 @@ class MAModel():
         self,
         notes = "",
         title = "result",
-        path_to_save_dir="generated_pic/",
+        path_to_save_dir="./",
         vis_features : list[str] = ['label','conditions','predicted_labels','weight','opinion'],
         form : str = "",
         add_description : bool = True):
@@ -977,18 +979,19 @@ class _Judge:
 if __name__ == "__main__":
     # Confirmation of IO operation
     model = MAModel()
-    path = input("input model path:")
+    path = settings.MODEL_YAML_PATH
     model.read_yaml(path)
 
     for node in model.graph.nodes():
         model.predict_labels(node)
 
-    model.visualize(title = "simple",form = "index.label.skew",add_description=False)
-    model.visualize(title="normal")
     
-    model.save_yaml(path = "output.yml")
-    model2 = MAModel()
-    model2.read_yaml("output.yml")
-    model2.visualize(title="model2")
+    vis_features = settings.INFORMATION_TO_VISUALIZE
+
+    model.visualize(title = "predicted",form = "",add_description=False)
+
+    
+    model.save_yaml(path = "saved.yml")
+
 
     print ("end")
