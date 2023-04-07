@@ -35,7 +35,7 @@ python MAmodel/MAmodel.py
 <img width="740" alt="スクリーンショット 2023-03-29 18 24 33" src="https://user-images.githubusercontent.com/46624038/228489550-e470e432-61dd-489b-8d7d-bff74ed5ae1e.png">
 <img width="811" alt="スクリーンショット 2023-03-29 18 25 00" src="https://user-images.githubusercontent.com/46624038/228489645-23824f74-6798-4db4-a520-bce23e5bd6c9.png">
 
-#　重みの予測ラベル計算への算入方法
+# 重みの予測ラベル計算への算入方法
 
 条件データ (+,x1,x2) (-,y1,y2)が付与された頂点uの予測ラベルは以下のように定まる。
 
