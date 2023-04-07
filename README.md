@@ -39,8 +39,8 @@ python MAmodel/MAmodel.py
 
 条件データ (+,x1,x2) (-,y1,y2)が付与された頂点uの予測ラベルは以下のように定まる。
 
-Au : Auをrejに向かわせるような頂点の集合 (ラベルがl1かつuをattack　または　ラベルがl2かつuをsupport)
-Bu : Auをaccに向かわせるような頂点の集合 (ラベルがl2かつuをattack　または　ラベルがl1かつuをsupport)
+- Au : Auをrejに向かわせるような頂点の集合 (ラベルがl1かつuをattack　または　ラベルがl2かつuをsupport)
+- Bu : Auをaccに向かわせるような頂点の集合 (ラベルがl2かつuをattack　または　ラベルがl1かつuをsupport)
 
 V : AuとBuを一緒にした多重集合
 
@@ -48,15 +48,15 @@ average_weight : V内の頂点の重みの平均
 
 としたとき
 
-A_weightはAu内の重みの合計をaverage_weightで除したもの
-B_weightはBu内の重みの合計をaverage_weightで除したもの
+- A_weightはAu内の重みの合計をaverage_weightで除したもの
+- B_weightはBu内の重みの合計をaverage_weightで除したもの
 
 で定める。
 
-(+,x1,x2)についてはx1,x2,B_weightの大小関係によって判断を定める.
-(-,y1,y2)についてはy1,y2,A_weightの大小関係によって判断を定める。
+- (+,x1,x2)についてはx1,x2,B_weightの大小関係によって判断を定める.
+- (-,y1,y2)についてはy1,y2,A_weightの大小関係によって判断を定める。
 
-以上の判断を総合して予測ラベルを定める。
+以上の判断を総合して予測ラベルを定める(ソースコード内のtable_neutralなどを参照)。
 
 
 
